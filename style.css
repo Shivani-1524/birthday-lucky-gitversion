@@ -21,7 +21,7 @@ body {
 
 input {
   display: block;
-  width: 80%;
+  width: 200px;
   min-width: 200px;
   margin-top: 10px;
   height: 25px;
@@ -39,6 +39,12 @@ label {
   display: block;
 }
 
+.user-input {
+  width: fit-content;
+  display: block;
+  margin: auto;
+}
+
 button {
   margin: auto;
   display: block;
@@ -54,15 +60,14 @@ button {
 }
 .privacy-notice {
   position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  left: 0;
-  right: 0;
-  text-align: center;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   background-color: #ff6d00;
   width: 400px;
   font-weight: bolder;
+  text-align: center;
 }
 button:focus,
 input:focus {
