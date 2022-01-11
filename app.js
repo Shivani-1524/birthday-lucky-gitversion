@@ -9,7 +9,7 @@ notice.style.display = "block";
 
 setTimeout(function displayNotice() { notice.style.display = "none"; }, 5000);
 
-function checkLuckNumber() {
+const checkLuckNumber = () => {
     if (dateOfBirth.value && luckyNumber.value) {
         if (!isNaN(luckyNumber.value)) {
             const bdayDate = dateOfBirth.value;
@@ -29,7 +29,7 @@ function checkLuckNumber() {
     }
 }
 
-function checkValues(sum, luckyNumber) {
+const checkValues = (sum, luckyNumber) => {
     outputBox.style.display = "block";
     if (sum % luckyNumber === 0) {
         outputBox.innerText = "Your birthday is lucky 😎";
@@ -38,7 +38,7 @@ function checkValues(sum, luckyNumber) {
     }
 }
 
-function calculateSum(bdayDate) {
+const calculateSum = (bdayDate) => {
     bdayDate = bdayDate.replaceAll("-", "");
     let sum = 0;
     for (let i = 0; i < bdayDate.length; i++) {
